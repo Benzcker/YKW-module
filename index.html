@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>YKW-Module</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/main.js" type="module"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="panel panel-default uploader">
+                <div class="panel-heading">
+                    <h3>Modul ausw&auml;hlen</h3>
+                </div>
+                <div class="panel-body">
+        
+                    <!-- Standar Form -->
+                    <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="file" name="files[]" id="jsUploadFiles" multiple>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-info" id="js-upload-submit">Upload files</button>
+                        </div>
+                    </form>
+        
+                    <!-- Drop Zone -->
+                    <h4>Or drag and drop files below</h4>
+                    <div class="upload-drop-zone" id="drop-zone">
+                        Just drag and drop files here
+                    </div>
+        
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /container -->
+        
+        <div class="mainPart">
+            
+            <div class="row justify-content-md-center">
+                
+                <div class="col col-lg-8 quest-input"> <!-- Linke Spalte -->
+                    <form action="" method="post" enctype="multipart/form-data" id="questInput">
+                        
+                        <div class="questSpacer"></div>
+
+                        <div class="quest-information"><input type="text" name="question" id="quest" value="" placeholder="Frage" maxlength="50"></div>
+                        <div class="quest-information"><input type="text" name="answer" id="answer" value="" placeholder="Antwort" maxlength="45"></div>
+                        
+                        <div class="questSpacer"></div>
+                        
+                        <div class="quest-information"><input type="text" name="wrong1" id="wrong1" value="" placeholder="Falsche Antwort" maxlength="45"></div>
+                        <div class="quest-information"><input type="text" name="wrong2" id="wrong2" value="" placeholder="Falsche Antwort" maxlength="45"></div>
+                        <div class="quest-information"><input type="text" name="wrong3" id="wrong3" value="" placeholder="Falsche Antwort" maxlength="45"></div>
+                        
+                        <div class="questSpacer"></div>
+
+                        <center><button type="submit" class="btn btn-primary">SAVE QUESTION</button></center>
+
+                    </form>
+                </div> <!-- Linke Spalte ENDE -->
+                
+                <div class="col col-lg-4"> <!-- Rechte Spalte -->
+                    
+                    <div id="questions">
+                        
+                    </div>
+                    
+                </div><!-- Rechte Spalte ENDE -->
+                
+            </div>
+            
+            <div class="saveSpacer"></div>
+            <input type="text" id="modName"></input><br>
+            <button type="button" class="btn btn-success" id="saveModule" onclick="save()">SAVE</button>
+
+        </div>
+
+
+
+    </body>
+</html>
